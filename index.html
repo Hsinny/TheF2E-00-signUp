@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>查詢報名 | The F2E</title>
+  <link rel="stylesheet" href="css/style-all.css">
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Navbar Icon -->
+    <button id="navbar-toggler" class="navbar-toggler" type="button">
+      <svg class="navbar-toggler-icon" viewBox="0 0 50 37">
+        <line class="line-1" x1="1" y1="1"     x2="49" y2="1"/>
+        <line class="line-2" x1="1" y1="18.41" x2="49" y2="18.41"/>
+        <line class="line-3" x1="1" y1="35.82" x2="49" y2="35.82"/>
+      </svg>
+    </button>
+    <!-- Navbar Big Menu-->
+    <div id="navbar-collapse" class="navbar-collapse">
+      <div class="navbar-head">
+        <!-- Logo -->
+        <div class="navbar-brand">
+          <img src="images/brand-logo.svg" width="80" height="80" alt="" title="Hsinny Brand Logo">
+        </div> 
+        <div class="brand-txt">
+          <div class="name">Hsinny</div>
+          <div class="job">前網頁設計師 / 正走在往前端的路上</div>
+        </div>
+        <!-- Close -->
+        <button id="btn-close" class="btn-close" type="button">
+          <svg viewBox="0 0 32 32"><path d="M10,10 L22,22 M22,10 L10,22"></path></svg>
+        </button>
+      </div>
+      <!-- Navi List -->
+      <ul class="navi-menu">
+        <li class="nav-item">
+          <span class="pill">Coming Soon</span>
+          <a class="nav-link">Weekly F2E #01 - 6/11 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #02 - 6/18 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #03 - 6/25 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #04 - 7/2 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #05 - 7/9 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #06 - 7/16 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #07 - 7/23 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #08 - 7/30 </a>
+        </li>
+        <li class="nav-item">
+          <span class="pill">敬請期待</span>
+          <a class="nav-link">Weekly F2E #09 - 8/6 </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <!-- Section-1 -->
+    <section id="section-1" class="section section-1 bg-gradient-1">
+      <div>
+        <img src="images/youngster.svg" alt="" width="400" height="380" class="youngster-img">
+        <div class="typing-txt">想獲得力量嗎？騷年？</div>
+        <button type="button" id="btn-go" class="btn-go"> 讓我變強吧！</button>
+      </div>
+    </section>
+    <!-- Section-2 -->
+    <section id="section-2" class="section section-2 bg-gradient-2">
+      <div>
+        <h1>
+          <img src="images/thef2e.png" alt="THE F2E 前端修煉 精神時光屋" title="THE F2E 前端修煉 精神時光屋" width="540" height="161">
+        </h1>
+        <!-- 目前時間 -->
+        <div id="nowTime" class="nowTime"></div>
+        <h2 class="title">加入挑戰人數</h2>
+        <div class="counter">
+          <!-- AJAX 報名人數 -->
+          <div id="counter-number" class="counter-number"><span class="font-xs"></span></div>
+          <!-- 倒數計時 -->
+          <div class="countdown">
+            <img src="images/icon-countdown.svg" width="20" height="30" alt="">
+            距離6/4開賽倒數
+            <span id="countdown-day"></span>天
+            <span id="countdown-hour"></span>時
+            <span id="countdown-minute"></span>分
+            <span id="countdown-second"></span>秒
+          </div>
+           <a href="https://github.com/hexschool/TheF2E" class="btn-link" target="_blank" rel="nofollow" >前往了解<img src="images/icon-angle-right.svg" width="10" height="16" alt=""></a>
+        </div>
+        <!-- AJAX post 報名E-mail -->
+        <div class="inquire">
+          <h3 class="heading">查詢報名狀態</h3>
+          <input type="text" placeholder="報名的E-mail" id="input-email" class="input-email">
+          <button type="button" id="btn-send" class="btn-send">送出查詢</button>
+        </div>
+        <!-- AJAX get 回傳報名結果 -->
+        <div class="inquire-result">查詢結果：
+          <span id="nickName"></span><span id="message"></span>
+          <div>報名時間： <span id="timeStamp"></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    圖片素材來源為<a href="https://github.com/hexschool/TheF2E" target="_blank" rel="nofollow">六角學院 The F2E活動</a>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="js/signUp.js"></script>
+</body>
+</html>

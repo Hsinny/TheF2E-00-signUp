@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.124 24.842">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #20d3fa;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="sand-clock-5893" transform="translate(0.75 0.75)">
+    <path id="layer2" class="cls-1" d="M16,36.743c1.539,0,3.832-2.182,5-3.112a1.951,1.951,0,0,1,2.318-.006c1.173.922,3.46,3.119,5,3.119M17.572,25.461c3.079-1.247,5.618,1.42,9.282-.084" transform="translate(-14.846 -16.124)"/>
+    <path id="layer1" class="cls-1" d="M26.469,25.342V20.1a5.465,5.465,0,0,0-2.291-4.457l-2.127-1.51a.391.391,0,0,1,0-.637l2.127-1.51a5.464,5.464,0,0,0,2.291-4.457V2M14.154,2V7.524a5.464,5.464,0,0,0,2.291,4.457l2.127,1.51a.391.391,0,0,1,0,.637l-2.127,1.51A5.464,5.464,0,0,0,14.154,20.1v5.247m-1.154,0H27.623M13,2H27.623" transform="translate(-13 -2)"/>
+    <path id="layer2-2" data-name="layer2" class="cls-1" d="M27.816,32.483c1.1.284,1.546,1.646,1.61,1.646A3.108,3.108,0,0,1,31,32.3" transform="translate(-22.114 -20.512)"/>
+  </g>
+</svg>

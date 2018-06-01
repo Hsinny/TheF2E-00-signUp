@@ -1,0 +1,309 @@
+/*------------------------------------*/
+/*  Font                          
+/*------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700')
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900')
+
+
+/*------------------------------------*/
+/*  Variable                       
+/*------------------------------------*/
+$blue: #1b3793
+$blue-dark: #090c40
+$cyan: #70fbfd
+
+
+/*------------------------------------*/
+/*  Mixin                      
+/*------------------------------------*/
+=size($width, $height: $width)
+  width:  $width
+  height: $height
+
+=flex($justify-content: center, $align-items: center)
+  display: flex
+  justify-content: $justify-content
+  align-items: $align-items
+
+=vertical-align($vertical-align: middle)
+  vertical-align: $vertical-align
+
+=btn($color: #fff, $bg:$cyan)
+  color: $color
+  background-color: $bg
+  font-size: 18px
+  font-weight: 400
+  letter-spacing: 2px
+  border: 0
+  padding: 10px 15px
+  transition: 1s
+  &:hover
+    background-color: darken($bg,10%)
+    transition: 1s
+
+/*------------------------------------*/
+/*  My Normalize                    
+/*------------------------------------*/
+*
+  box-sizing: border-box
+
+body 
+  letter-spacing: 1px
+  overflow-x: hidden
+
+a 
+  text-decoration: none
+
+button
+  border: 0
+  outline: none
+
+img 
+  max-width: 100%
+  height: auto
+  +vertical-align()
+
+svg
+  stroke-width: 1
+  fill: transparent
+  stroke: currentColor
+  transition: stroke .1s
+
+
+/*------------------------------------*/
+/*  Common      
+/*------------------------------------*/
+.section
+  +size(100vw,100vh)
+    
+.bg-gradient-1
+  background: linear-gradient($blue-dark, $blue)
+
+.bg-gradient-2
+  background-image: linear-gradient(125deg, $blue-dark 0%, $blue 20%, $cyan 20%, $cyan 30%,transparent 30%),linear-gradient(-125deg, $blue-dark 0%, $blue 20%, $cyan 20%, $cyan 100%)
+
+// Animation ======================================
+
+/*------------------------------------*/
+/*  Navigation     
+/*------------------------------------*/
+.navbar-toggler
+  +size(50px,37px)
+  color: #fff
+  background-color: transparent
+  position: fixed
+  top: 30px
+  left: 20px
+  transition: 1s
+  &:hover
+    transform: rotate(180deg)
+    transition: 1s
+
+.navbar-collapse
+  +size(400px,100vh)
+  background-color: #222
+  box-shadow: 2px 0px 10px $blue-dark
+  position: absolute
+  left: -50%
+  transition: 2s
+  // &.show
+  //   left: 0
+  //   transition: 2s
+
+#navbar-collapse.show
+  left: 0
+  transition: 2s
+
+.navbar-head
+  +size(100%, 80px)
+  background-color: #eee
+  +flex(space-between)
+  .name
+    font-size: 20px
+    font-family: 'Raleway', sans-serif
+    font-weight: 500
+    letter-spacing: 1px
+  .job
+    color: #777
+    font-size: 12px
+  .btn-close
+    +size(70px, auto)
+    +btn(#333, transparent)
+    transition: 0.5s
+    &:hover svg
+      transform: rotate(180deg)
+      transition: 0.5s
+
+.navi-menu
+  list-style: none
+  -webkit-padding-start: 0
+  -webkit-margin-before: 0
+  .nav-item
+    border-bottom: 1px solid #555
+    padding: 30px 60px
+    a
+      color: #777
+      font-size: 15px
+      font-weight: 300      
+    .pill
+      color: #fff
+      background-color: darken(#2fd566, 50%)     
+      border-radius: 5px
+      font-size: 12px 
+      padding: 2px 4px
+      
+
+/*------------------------------------*/
+/* Section-1     
+/*------------------------------------*/
+.section-1 
+  +flex(center,center)  
+  text-align: center
+
+@keyframes zoomIn
+  0%
+    transform: scale(0)
+
+.youngster-img
+  animation: zoomIn 4s
+
+// 打字效果
+@keyframes typing 
+  0% 
+    width: 0
+
+// 插入符號
+@keyframes caret
+  0%
+    border-color: transparent
+  50%
+    border-color: #fff
+
+.typing-txt
+  width: 11.4em
+  white-space: nowrap   // 不換行，文字才不會因為顯示範圍的寬度太小掉下去
+  overflow: hidden  // 隱藏超過寬度顯示範圍的文字
+  border-right: 1px solid #fff   // 當作插入符號
+  animation: typing 4s 5s steps(10),caret 1s 3s steps(1) infinite
+  animation-fill-mode: backwards  // 一開始不顯示
+  color: #fff
+  font-size: 54px
+  font-weight: bold
+  letter-spacing: 8px   
+  margin: 80px auto 60px
+
+// 閃爍
+@keyframes blink
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+
+.btn-go
+  +btn($blue-dark)
+  font-size: 24px
+  border-radius: 40px
+  padding: 15px 40px
+  box-shadow: 1px 2px 10px ($blue-dark), -1px 2px 10px ($blue-dark)
+  animation: zoomIn 2s 10s ease, blink 2s 10s steps(1) infinite
+  animation-fill-mode: backwards
+  transition: 1s
+  &:hover
+    transform: scale(1.1)
+    transition: 1s
+    animation-play-state: paused  // hover 暫停 animation
+
+
+/*------------------------------------*/
+/* Section-2     
+/*------------------------------------*/      
+.section-2
+  +flex()
+  text-align: center
+  .title
+    color: $blue-dark
+    font-size: 48px
+    font-weight: bold
+    margin: 5px 0 10px
+
+.nowTime
+  color: rgba($blue-dark,50%)
+  margin-top: 60px
+
+.counter
+  background-color: $blue-dark
+  padding: 15px 0 0
+
+.counter-number
+  color: #fff
+  font-size: 94px
+  font-family: 'Oswald', sans-serif
+  letter-spacing: 3px
+  border-radius: 5px 5px 0 0 
+
+.font-xs
+  color: #fff
+  font-size: 16px
+
+.btn-link
+  +size(100%,auto) 
+  +btn(#fff, $blue)
+  padding: 15px 0   
+  display: block
+  img 
+    margin-left: 8px
+
+.countdown
+  background-color: #fff
+  font-size: 22px
+  padding: 15px  0
+  margin-top: 15px
+  border-bottom: 1px solid #eee
+  vertical-align: middle
+  img
+    +vertical-align(text-bottom)
+
+.inquire
+  background-color: #fff
+  border-radius: 3px 3px 0 0
+  padding: 15px 60px
+  margin-top: 15px
+  .heading
+    text-align: left
+
+.input-email
+  +size(100%,50px)
+  color: #aaa
+  padding: 0 15px
+  margin-bottom: 10px
+
+.btn-send
+  +size(100%,auto) 
+  +btn($blue-dark)
+  margin-bottom: 20px
+
+.inquire-result
+  background-color: #eee
+  text-align: left  
+  padding: 25px 60px
+
+#timeStamp
+  color: #999
+  font-size: 14px
+
+
+/*------------------------------------*/
+/* Footer   
+/*------------------------------------*/   
+.footer
+  color: #777
+  font-size: 12px
+  text-align: center
+  padding: 5px
+
+
+/*------------------------------------*/
+/* RWD
+/*------------------------------------*/  
+@media (max-width: 991px)
+  //
