@@ -50,6 +50,7 @@ $cyan: #70fbfd
 body 
   letter-spacing: 1px
   overflow-x: hidden
+  font-family: "Microsoft JhengHei", "微軟正黑體", "蘋果儷中黑", "Apple LiGothic Medium", Arial, Helvetica, sans-serif
 
 a 
   text-decoration: none
@@ -82,7 +83,6 @@ svg
 .bg-gradient-2
   background-image: linear-gradient(125deg, $blue-dark 0%, $blue 20%, $cyan 20%, $cyan 30%,transparent 30%),linear-gradient(-125deg, $blue-dark 0%, $blue 20%, $cyan 20%, $cyan 100%)
 
-// Animation ======================================
 
 /*------------------------------------*/
 /*  Navigation     
@@ -106,9 +106,6 @@ svg
   position: absolute
   left: -50%
   transition: 2s
-  // &.show
-  //   left: 0
-  //   transition: 2s
 
 #navbar-collapse.show
   left: 0
@@ -123,6 +120,11 @@ svg
     font-family: 'Raleway', sans-serif
     font-weight: 500
     letter-spacing: 1px
+  .icon-github
+    margin-left: -2px
+    vertical-align: text-top
+  .icon-codepen
+    vertical-align: text-top
   .job
     color: #777
     font-size: 12px

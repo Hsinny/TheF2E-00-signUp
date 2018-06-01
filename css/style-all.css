@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    @mixin ========================================================================= */
@@ -290,7 +291,8 @@ template {
 
 body {
   letter-spacing: 1px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: "Microsoft JhengHei", "微軟正黑體", "蘋果儷中黑", "Apple LiGothic Medium", Arial, Helvetica, sans-serif; }
 
 a {
   text-decoration: none; }
@@ -391,6 +393,11 @@ svg {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     letter-spacing: 1px; }
+  .navbar-head .icon-github {
+    margin-left: -2px;
+    vertical-align: text-top; }
+  .navbar-head .icon-codepen {
+    vertical-align: text-top; }
   .navbar-head .job {
     color: #777;
     font-size: 12px; }
