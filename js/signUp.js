@@ -163,11 +163,11 @@ $(document).ready(function() {
   /* GA Event Tracking
   /*========================================================*/
   
-  $('#navbar-toggler').click(function() {
+  $('#navbar-collapse').click(function() {
     ga('send','event','view','click','menu');
   });
 
-  $('#navbar-toggler').hover(function () {
+  $('#navbar-collapse').hover(function () {
     ga('send', 'event', 'view', 'hover', 'menu');
   });
 
