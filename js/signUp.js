@@ -162,33 +162,19 @@ $(document).ready(function() {
   /*========================================================*/
   /* GA Event Tracking
   /*========================================================*/
-  
-  $('#navbar-collapse').click(function() {
-    ga('send','event','view','click','menu');
+
+  $('#navbar-toggler').hover(function () {
+    gtag('event', 'view', {
+      'event_category': 'btn-click',
+      'event_label': 'menu'
+    });
   });
 
-  $('#navbar-collapse').hover(function () {
-    ga('send', 'event', 'view', 'hover', 'menu');
-  });
-
-  $('#my-github').click(function () {
-    ga('send', 'event', 'link', 'click', 'github');
-  });
-
-  $('#my-codepen').click(function () {
-    ga('send', 'event', 'link', 'click', 'codepen');
-  });
-
-  $('#btn-go').click(function () {
-    ga('send', 'event', 'view', 'click', 'btn');
-  });
-
-  $('#btn-link-activity').click(function () {
-    ga('send', 'event', 'link', 'click', 'activity');
-  });
-
-  $('#btn-send').click(function () {
-    ga('send', 'event', 'inquire', 'click', 'inquire');
+  $('#navbar-toggler').click(function () {
+    gtag('event', 'view', {
+      'event_category': 'btn-click',
+      'event_label': 'menu'
+    });
   });
 
 });
