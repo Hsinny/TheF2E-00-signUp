@@ -163,17 +163,52 @@ $(document).ready(function() {
   /* GA Event Tracking
   /*========================================================*/
 
-  $('#navbar-toggler').hover(function () {
-    gtag('event', 'view', {
-      'event_category': 'btn-click',
+  $('#navbar-toggler').click(function () {
+    gtag('event', 'view-more', {
+      'event_category': 'click',
       'event_label': 'menu'
     });
   });
 
-  $('#navbar-toggler').click(function () {
-    gtag('event', 'view', {
-      'event_category': 'btn-click',
+  $('#navbar-toggler').hover(function () {
+    gtag('event', 'view-more', {
+      'event_category': 'hover',
       'event_label': 'menu'
+    });
+  });
+
+  $('#my-github').click(function () {
+    gtag('event', 'outer-link', {
+      'event_category': 'click',
+      'event_label': 'my-github'
+    });
+  });
+
+  $('#my-codepen').click(function () {
+    gtag('event', 'outer-link', {
+      'event_category': 'click',
+      'event_label': 'my-codepen'
+    });
+  });
+
+  $('#btn-go').click(function () {
+    gtag('event', 'view-more', {
+      'event_category': 'click',
+      'event_label': 'content'
+    });
+  });
+
+  $('#btn-link-activity').click(function () {
+    gtag('event', 'view-more', {
+      'event_category': 'click',
+      'event_label': 'link-activity'
+    });
+  });
+
+  $('#btn-send').click(function () {
+    gtag('event', 'send-inquire', {
+      'event_category': 'click',
+      'event_label': 'inquire'
     });
   });
 
