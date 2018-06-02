@@ -361,13 +361,19 @@ svg {
   -webkit-box-shadow: 2px 0px 10px #090c40;
   box-shadow: 2px 0px 10px #090c40;
   position: absolute;
-  left: -50%;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
   -webkit-transition: 2s;
   -o-transition: 2s;
-  transition: 2s; }
+  transition: 2s;
+  z-index: 1; }
 
 #navbar-collapse.show {
-  left: 0;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
   -webkit-transition: 2s;
   -o-transition: 2s;
   transition: 2s; }
@@ -432,6 +438,7 @@ svg {
 
 .navi-menu {
   list-style: none;
+  -webkit-margin-after: 0;
   -webkit-padding-start: 0;
   -webkit-margin-before: 0; }
   .navi-menu .nav-item {
@@ -695,8 +702,6 @@ svg {
 /* RWD */
 /*------------------------------------*/
 @media (max-width: 991px) {
-  .navbar-toggler, .navbar-collapse {
-    display: none; }
   .bg-gradient-2 {
     background-image: -webkit-linear-gradient(325deg, #090c40 0%, #1b3793 15%, #70fbfd 15%, #70fbfd 20%, transparent 20%), -webkit-linear-gradient(215deg, #090c40 0%, #1b3793 15%, #70fbfd 15%, #70fbfd 100%);
     background-image: -o-linear-gradient(325deg, #090c40 0%, #1b3793 15%, #70fbfd 15%, #70fbfd 20%, transparent 20%), -o-linear-gradient(215deg, #090c40 0%, #1b3793 15%, #70fbfd 15%, #70fbfd 100%);
@@ -718,6 +723,14 @@ svg {
     font-size: 40px; } }
 
 @media (max-width: 575px) {
+  .navbar-collapse {
+    width: 375px; }
+  .navbar-head {
+    height: 70px; }
+  .navbar-brand img {
+    width: 70px; }
+  .navi-menu .nav-item {
+    padding: 20px 30px; }
   .youngster-img {
     width: 240px;
     height: auto; }
@@ -776,3 +789,22 @@ svg {
     padding: 15px; }
   #timeStamp {
     font-size: 12px; } }
+
+@media (max-width: 374px) {
+  .navbar-toggler {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 10px; }
+  .navbar-collapse {
+    width: 100vw; }
+  .navbar-head {
+    height: 55px; }
+    .navbar-head .btn-close {
+      width: 40px;
+      height: 40px;
+      padding: 0; }
+  .navbar-brand img {
+    width: 55px; }
+  .navi-menu .nav-item {
+    padding: 17px; } }

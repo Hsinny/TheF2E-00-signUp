@@ -104,11 +104,13 @@ svg
   background-color: #222
   box-shadow: 2px 0px 10px $blue-dark
   position: absolute
-  left: -50%
+  left: 0   // menu定位在0，利用translateX做位移隱藏選單
+  transform: translateX(-100%)
   transition: 2s
+  z-index: 1
 
 #navbar-collapse.show
-  left: 0
+  transform: translateX(0)  // 取消translateX的位移顯示選單
   transition: 2s
 
 .navbar-head
@@ -138,6 +140,7 @@ svg
 
 .navi-menu
   list-style: none
+  -webkit-margin-after: 0
   -webkit-padding-start: 0
   -webkit-margin-before: 0
   .nav-item
@@ -308,9 +311,6 @@ svg
 /* RWD
 /*------------------------------------*/  
 @media (max-width: 991px)
-  .navbar-toggler, .navbar-collapse
-    display: none
-
   .bg-gradient-2
     background-image: linear-gradient(125deg, $blue-dark 0%, $blue 15%, $cyan 15%, $cyan 20%,transparent 20%),linear-gradient(-125deg, $blue-dark 0%, $blue 15%, $cyan 15%, $cyan 100%)  
 
@@ -330,6 +330,19 @@ svg
     font-size: 40px
 
 @media (max-width: 575px)
+  .navbar-collapse 
+    width: 375px    
+
+  .navbar-head
+    height: 70px
+  
+  .navbar-brand img 
+    width: 70px
+
+  .navi-menu 
+    .nav-item 
+      padding: 20px 30px
+
   .youngster-img
     +size(240px, auto)
 
@@ -399,3 +412,24 @@ svg
   
   #timeStamp
     font-size: 12px
+
+@media (max-width: 374px)
+  .navbar-toggler 
+    +size(40px)
+    top: 15px
+    left: 10px
+
+  .navbar-collapse 
+    width: 100vw  
+
+  .navbar-head
+    height: 55px
+    .btn-close
+      +size(40px)
+      padding: 0
+
+  .navbar-brand img 
+    width: 55px
+
+  .navi-menu .nav-item 
+    padding: 17px
